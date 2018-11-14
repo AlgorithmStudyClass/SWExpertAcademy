@@ -1,0 +1,11 @@
+﻿  main.cpp
+c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\minki\minki\main.cpp(17): warning C4101: 'm': unreferenced local variable
+c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\minki\minki\main.cpp(17): warning C4101: 'len': unreferenced local variable
+c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\minki\minki\main.cpp(17): warning C4101: 'sum': unreferenced local variable
+c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\minki\minki\main.cpp(17): warning C4101: 'max': unreferenced local variable
+c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\minki\minki\main.cpp(17): warning C4101: 'k': unreferenced local variable
+c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\minki\minki\main.cpp(17): warning C4101: 'cnt': unreferenced local variable
+c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\minki\minki\main.cpp(17): warning C4101: 'ans': unreferenced local variable
+c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\minki\minki\main.cpp(17): warning C4101: 'index': unreferenced local variable
+c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\minki\minki\main.cpp(18): warning C4101: 'flag': unreferenced local variable
+  minki.vcxproj -> C:\Users\Minki.000\Desktop\Coding\acm & samsung\Algorithm_Study\minki\Debug\minki.exe
