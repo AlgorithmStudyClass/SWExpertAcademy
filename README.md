@@ -1,1 +1,1 @@
-# SWExpertAcademy
+# SWExpert Academy
