@@ -42,5 +42,11 @@
     <ClCompile Include="SW_Expert_Academy\D3\1493_New Computations of Numbers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\5549_Odd or even.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\Data structure _ Algorithm\Stack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
