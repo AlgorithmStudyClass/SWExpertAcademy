@@ -42,5 +42,38 @@
     <ClCompile Include="SW_Expert_Academy\D3\1493_New Computations of Numbers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\5549_Odd or even.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\Data structure _ Algorithm\Stack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\Data structure _ Algorithm\Queue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\Data structure _ Algorithm\Priority Queue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\Data structure _ Algorithm\Tree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\Data structure _ Algorithm\Graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\Data structure _ Algorithm\Hash table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\Data structure _ Algorithm\Linked List.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\Data structure _ Algorithm\DFS Searching.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\Data structure _ Algorithm\BFS Searching.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\5603_Dry grass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
