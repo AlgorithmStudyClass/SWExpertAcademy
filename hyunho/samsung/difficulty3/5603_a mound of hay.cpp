@@ -12,81 +12,49 @@ https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId
 #include<algorithm>
 using namespace std ;
 
-bool equal( int *arr  , int size ) {
-
-    int flag = 1 ;
-    int num = arr[0] ;
-    for( int i = 0 ; i < size ; i++ ) {
-
-        if( num == arr[i] ) {
-            flag = 1 ;
-        }
-        else {
-            flag = 0 ;
-            break ;
-        }
-    }
-
-    if( flag == 1 )
-        return true ;
-    else
-        return false ;
-}
-
-int func( int *arr , int size) {
-
-    int cnt = 0 ;
-
-    while(true ) {
-
-        if( equal( arr , size ) )
-            return cnt ;
-
-        int max = arr[0] ;
-        int maxIndex = 0 ;
-        int min = arr[0] ;
-        int minIndex = 0 ;
-
-        for( int i = 0 ; i < size ; i++ ) {
-
-            if( max < arr[i] ) {
-                max = arr[i] ;
-                maxIndex = i ;
-            }
-
-            if( min > arr[i] ) {
-                min = arr[i] ;
-                minIndex = i ;
-            }
-        }
-
-        arr[ maxIndex ]-- ;
-        arr[ minIndex ]++ ;
-        cnt++ ;
-    }
-}
-
 int main() {
 
-    int testSize = 0 ;
-    scanf("%d" , &testSize ) ;
+   int t, ans, line = 1, len, n, m, k, temp, sum, max, cnt, index;
+   bool flag;
+   vector<int> vec, temp_vec;
+   string str, temp_str;
+   vector<string> str_vec, ans_vec;
 
-    int T = 0 ;
-    while( T++ < testSize ) {
+   cin >> t;
 
-        int size = 0 ;
-        scanf("%d" , &size ) ;
+   while (t > 0) {
+      //입력
+      cin >> n;
+      ans = 0;
+      sum = 0;
+      for (int i = 0; i < n; i++) {
+         scanf("%d", &temp);
+         vec.push_back(temp);
+         sum += temp;
+      }
 
-        int *arr = new int[ size ] ;
+      sort(vec.begin(), vec.end());
+      
+      int left = 0;
+      int right = n - 1;
+      int avg = sum / n;
 
-        for( int i = 0 ; i < size ; i++ )
-            scanf("%d" , &arr[i] ) ;
+      while (vec[left] != vec[right]) {
+         temp = avg - vec[left];
+         ans += temp;
+         vec[left++] = avg;
+         while (vec[right] - temp < avg) {
+            temp -= vec[right] - avg;
+            vec[right--] = avg;
+         }
+         vec[right] -= temp;
+      }
 
-        int result = func( arr  , size ) ;
-
-        printf("#%d %d\n" , T , result ) ;
+      cout << "#" << line++ << " " << ans << endl;
+      vec.clear();
+      t--;
     }
-    return 0 ;
+   return 0;
 }
 
 
