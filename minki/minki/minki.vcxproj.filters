@@ -75,5 +75,8 @@
     <ClCompile Include="SW_Expert_Academy\D3\5603_Dry grass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\2806_N-Queen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
