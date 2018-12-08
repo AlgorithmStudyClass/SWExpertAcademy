@@ -1,4 +1,5 @@
 ﻿  main.cpp
+c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\swexpertacademy\minki\minki\main.cpp(18): warning C4018: '<': signed/unsigned mismatch
 c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\swexpertacademy\minki\minki\main.cpp(33): warning C4101: 'm': unreferenced local variable
 c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\swexpertacademy\minki\minki\main.cpp(33): warning C4101: 'len': unreferenced local variable
 c:\users\minki.000\desktop\coding\acm & samsung\algorithm_study\swexpertacademy\minki\minki\main.cpp(33): warning C4101: 'sum': unreferenced local variable
