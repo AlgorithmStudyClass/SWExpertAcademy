@@ -3,7 +3,6 @@
 https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWS2dSgKA8MDFAVT&categoryId=AWS2dSgKA8MDFAVT&categoryType=CODE
 */
 
-
 #include<iostream>
 #include<vector>
 #include<cstdio>
@@ -12,12 +11,12 @@ https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId
 #include<algorithm>
 using namespace std ;
 
-int countFunc( char *str , int size ) {
+int countFunc( string str ) {
 
     int cnt = 0 ;       //  필요한 고용 사람 수
     int currentCnt = 0 ;        //  현재 치고 있는 사람 수
 
-    for( int i = 0 ; i < size ; i++ ) {
+    for( int i = 0 ; i < str.length() ; i++ ) {
 
         if( str[i] != '0' ) {   //  str[i] 가 '0' 일 경우에는 더할 필요없으니 무시한다
 
@@ -39,19 +38,12 @@ int main() {
     int T = 0 ;
     while( T++ < testSize ) {
 
-        string tmpStr = "" ;
-        cin >> tmpStr ;
+        string str = "" ;
+        cin >> str ;
 
-        //  string 으로 입력 받아서 char * 형태로 변환
-        int size = tmpStr.length() ;
-        char *str = new char[ size + 1 ] ;
-        strcpy(str , tmpStr.c_str() );
-
-        int result = countFunc( str , size ) ;
+        int result = countFunc( str ) ;
 
         printf("#%d %d\n" , T , result ) ;
-
-        delete []str ;
     }
     return 0 ;
 }
