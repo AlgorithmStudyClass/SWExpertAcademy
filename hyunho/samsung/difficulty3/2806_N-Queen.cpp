@@ -3,7 +3,6 @@
 https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7GKs06AU0DFAXB&categoryId=AV7GKs06AU0DFAXB&categoryType=CODE
 */
 
-
 #include<iostream>
 #include<vector>
 #include<cstdio>
@@ -33,7 +32,7 @@ void queens( int i , int size , int *col ) {
 
     for( int j = 1 ; j <= size ; j++ ) {
 
-        col[ i + 1 ] = j ;
+        col[ i ] = j ;
 
         if( promising( i , col ) ) {
 
@@ -61,7 +60,7 @@ int main() {
 
         int col[20] = { 0 } ;
 
-        queens( 0 , size , col ) ;
+        queens( 1 , size , col ) ;
 
         printf("#%d %d\n" , T , cnt ) ;
         cnt = 0 ;
