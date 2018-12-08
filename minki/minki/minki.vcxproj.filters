@@ -81,5 +81,11 @@
     <ClCompile Include="SW_Expert_Academy\D3\4789_Successful show plan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\1873_Battle field.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\5948_735 game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
