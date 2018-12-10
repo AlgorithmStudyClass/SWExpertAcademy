@@ -1,6 +1,6 @@
 /*
-2806. N-Queen D3
-https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7GKs06AU0DFAXB&categoryId=AV7GKs06AU0DFAXB&categoryType=CODE
+5549. 홀수일까 짝수일까 D3
+https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWWxpEDaAVoDFAW4&categoryId=AWWxpEDaAVoDFAW4&categoryType=CODE
 */
 
 #include<iostream>
