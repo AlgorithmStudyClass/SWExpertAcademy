@@ -87,5 +87,23 @@
     <ClCompile Include="SW_Expert_Academy\D3\5948_735 game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\5601_Divide juice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\3809_List integer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\5789_Replace a box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\5356_Speak vertically.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\4047_Card counting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\3131_All prime numbers under 1M.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
