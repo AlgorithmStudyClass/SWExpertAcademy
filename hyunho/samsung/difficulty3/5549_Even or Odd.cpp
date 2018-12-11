@@ -6,8 +6,8 @@ https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId
 #include<iostream>
 #include<vector>
 #include<cstdio>
-#include<cstdlib>
-#include<string>
+#include<stdlib.h>
+#include<string.h>
 #include<algorithm>
 using namespace std ;
 
@@ -19,8 +19,11 @@ int main() {
     int T = 0 ;
     while( T++ < testSize ) {
 
-        unsigned long long int num = 0 ;
-        scanf("%lld" , &num ) ;
+        char input[101] = "" ;
+        scanf("%s" , input ) ;
+
+        int size = strlen( input ) ;
+        int num = int( input[ size - 1 ] ) ;
 
         if( num % 2 == 0 )
             printf("#%d %s\n" , T , "Even" ) ;
