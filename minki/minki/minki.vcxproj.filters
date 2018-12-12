@@ -105,5 +105,17 @@
     <ClCompile Include="SW_Expert_Academy\D3\3131_All prime numbers under 1M.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Acm-icpc\DP\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\4371_A ship entering the harbor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\6485_Samsung city bus line.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SW_Expert_Academy\D3\6057_A triangle on a graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
