@@ -11,11 +11,11 @@ https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId
 #include<algorithm>
 using namespace std ;
 
-void change( int *checkArr , int *temp , int N , int gap ) {
+void change( int *checkArr , int *arr , int N , int gap ) {
 
     for( int i = 1 ; i < N ; i++ ) {
 
-        if( temp[i] % gap == 1 )
+        if( arr[i] % gap == 1 )
             checkArr[i] = 1 ;
     }
 }
@@ -45,8 +45,6 @@ int main() {
         for( int i = 0 ; i < N ; i++ )
             scanf("%d" , &arr[i] ) ;
 
-        int *temp = arr ;
-
         int *checkArr = new int[ N ] ;
         for( int i = 0 ; i < N ; i++ )
             checkArr[i] = 0 ;
@@ -57,8 +55,8 @@ int main() {
 
             if( checkArr[i] != 1 ) {
 
-                int gap = temp[ i ] - temp[ 0 ] ;
-                change( checkArr , temp , N , gap ) ;
+                int gap = arr[ i ] - arr[ 0 ] ;
+                change( checkArr , arr , N , gap ) ;
                 cnt++ ;
             }
             i++ ;
