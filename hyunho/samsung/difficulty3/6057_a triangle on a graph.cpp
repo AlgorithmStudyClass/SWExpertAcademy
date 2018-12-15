@@ -11,7 +11,7 @@ https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId
 #include<algorithm>
 using namespace std ;
 
-int cnt ;
+int cnt = 0 ;
 
 void check( int **arr , int N , int index1 , int index2 ) {
 
@@ -61,7 +61,7 @@ int main() {
                 }
             }
         }
-        
+
         printf("#%d %d\n" , T , cnt ) ;
 
         for( int i = 0 ; i < N + 1 ; i++ )
