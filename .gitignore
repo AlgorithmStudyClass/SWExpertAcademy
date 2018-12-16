@@ -33,3 +33,15 @@
 
 # Mac
 .DS_Store
+
+*.db
+
+minki/\.vs/minki/v15/
+
+minki/Debug/
+
+minki/minki/Debug/
+
+*.vcxproj
+
+*.filters
