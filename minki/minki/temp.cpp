@@ -1,62 +1,47 @@
-string solution(string rule, string A, string B) {
-	string answer = "";
+/*
+2817. 부분 수열의 합 - D3
+https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7IzvG6EksDFAXB&categoryId=AV7IzvG6EksDFAXB&categoryType=CODE
+*/
 
-	int len = rule.length();
-	int a = 0, b = 0, diff, temp;
+#include <iostream> // cin 사용 위해 필요 
+#include <vector> // vector 사용 위해 필요  
+#include <algorithm> // sort 사용 위해 필요 
+#include <string>
+#include <numeric>
+#include <sstream>
 
-	temp = 1;
-	for (int i = A.length() - 1; i >= 0; i--) {
-		a += distance(rule.begin(), find(rule.begin(), rule.end(), A[i])) * temp;
-		temp *= len;
-	}
+using namespace std;
 
-	temp = 1;
-	for (int i = B.length() - 1; i >= 0; i--) {
-		b += distance(rule.begin(), find(rule.begin(), rule.end(), B[i])) * temp;
-		temp *= len;
-	}
+int func(int arr[], int n, int k) {
+	int ans = 0;
 
-	diff = a - b;
 
-	while (diff > 0) {
-		temp = diff % len;
-		diff /= len;
-		answer.insert(answer.begin(), rule[temp]);
-	}
-
-	return answer;
+	return ans;
 }
 
-int main(void) {
-	printf("%s\n", solution("zothf", "otz", "hh").c_str());
-	printf("%s\n", solution("ab", "ba", "a").c_str());
-	printf("%s\n", solution("abcdefghij", "cba", "a").c_str());
-}
-
-int solution(vector<vector<int> > envelopes)
+int main()
 {
-	int answer = 1, len = envelopes.size(), a, b;
+	int t, ans, line = 1, len, n, m, k, temp, sum, max, cnt, number;
+	bool flag, flag2;
+	vector<int> vec, temp_vec, ans_vec;
+	vector<vector<int>> vec_vec;
+	string str, temp_str;
 
-	//첫 원소로 정렬
-	sort(envelopes.begin(), envelopes.end());
+	cin >> t;
 
-	a = envelopes[0][0];
-	b = envelopes[0][1];
+	while (t > 0) {
+		//입력    
+		cin >> n >> k;
 
-	for (int i = 1; i < len; i++) {
-		if (a < envelopes[i][0] && b < envelopes[i][1]) {
-			answer++;
-			a = envelopes[i][0];
-			b = envelopes[i][1];
+		int arr[1001];
+
+		for (int i = 0; i < n; i++) {
+			scanf("%d", &arr[i]);
 		}
+
+		printf("#%d %d\n", line++, func(arr, n, k));
+		t--;
 	}
 
-	return answer;
-}
-
-int main(void) {
-
-	//	printf("%d\n", solution({ { 5,3 },{ 5,7 },{ 3,3 },{ 1,2 } }));
-	printf("%d\n", solution({ { 3,6 },{ 2,3 },{ 7,3 },{ 1,1 },{ 8, 6 },{ 4, 5 } }));
-
+	return 0;
 }
