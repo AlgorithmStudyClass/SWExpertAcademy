@@ -34,6 +34,11 @@
 # Mac
 .DS_Store
 
+# sublime binary file
+*
+!*.c
+!Makefile
+
 *.db
 
 minki/\.vs/minki/v15/
