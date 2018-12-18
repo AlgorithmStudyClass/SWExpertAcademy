@@ -36,7 +36,7 @@
 
 # sublime binary file
 *
-!.cpp
+!*.cpp
 
 
 
