@@ -35,8 +35,12 @@
 .DS_Store
 
 # sublime binary file
-!Makefile
+.
+*.cpp
 
+
+
+# minki visul
 *.db
 
 minki/\.vs/minki/v15/
