@@ -10,65 +10,59 @@ using namespace std;
 
 int main() {
 
-   int testSize = 0;
-   scanf("%d", &testSize);
+   int testSize = 0 ;
+   scanf("%d" , &testSize ) ;
 
    int T = 0;
-   while (T++ < testSize) {
+   while( T++ < testSize ) {
 
-      int N = 0;
-      scanf("%d", &N);
+      int N = 0 ;
+      scanf("%d" , &N ) ;
 
-      vector<vector<int>> vec;
-      int x, y;
+      vector<vector<int> > coordinates ;
 
-      for (int i = 0; i < N; i++) {
-         vec.push_back(vector<int>());
-         scanf("%d %d", &x, &y);
-         vec[i].push_back(x);
-         vec[i].push_back(y);
-         vec[i].push_back(1);
-         vec[i].push_back(i + 1);
+      int X , Y = 0 ;
+      for( int i = 0 ; i < N ; i++ ) {
+         
+         coordinates.push_back( vector<int>() ) ;
+
+         scanf("%d %d" , &X , &Y ) ;
+         coordinates[i].push_back( X ) ;
+         coordinates[i].push_back( Y ) ;
+         coordinates[i].push_back( i + 1 ) ;
       }
 
-      for (int i = 0; i < N; i++) {
-         if (vec[i][2] == 0)
-            continue;
-         else {
-            for (int j = 0; j < N; j++) {
-               if (vec[j][2] == 0 || i == j)
-                  continue;
-               else {
-                  if (vec[i][0] < vec[j][0] && vec[i][1] < vec[j][1])
-                     vec[j][2] = 0;
-                  else if (vec[i][0] == vec[j][0]) {
-                     if (vec[i][1] < vec[j][1])
-                        vec[j][2] = 0;
-                  }
+      sort( coordinates.begin() , coordinates.end() ) ;
 
-                  if (vec[i][1] == vec[j][1]) {
-                     if (vec[i][0] < vec[j][0])
-                        vec[j][2] = 0;
-                  }
-               }
-            }
+      vector<int> result ;
+
+      int currentX = coordinates[0][0] ;
+      int currentY = coordinates[0][1] ;
+      result.push_back( coordinates[0][2] ) ;
+      for( int i = 1 ; i < coordinates.size() ; i++ ) {
+
+         if( currentX > coordinates[i][0] || currentY > coordinates[i][1] ) {
+
+            currentX = coordinates[i][0] ;
+            currentY = coordinates[i][1] ;
+            result.push_back( coordinates[i][2] ) ;
          }
       }
 
-      sort(vec.begin(), vec.end());
-
-
-      printf("#%d ", T);
-      for (int i = 0; i < N; i++) {
-         if (vec[i][2] == 1) {
-            printf("%d ", vec[i][3]);
-         }
-      }
-      cout << endl;
+      printf("#%d " , T ) ;
+      for( int i = 0 ; i < result.size() ; i++ )
+         printf("%d " , result[i] ) ;
+      printf("\n") ;
 
       for (int i = 0; i < N; i++)
-         vec[i].clear();
-      vec.clear();
+         coordinates[i].clear();
+      coordinates.clear();
+      result.clear() ;
    }
-   return 0;
+   return 0 ;
 }
+
+
+
+
+
