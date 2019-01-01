@@ -1,5 +1,5 @@
 /*
-5986. 새샘이와 세 소수
+5986. 새샘이와 세 소수 D3
 https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWaJ3q8qV-4DFAUQ&categoryId=AWaJ3q8qV-4DFAUQ&categoryType=CODE
 */
 
