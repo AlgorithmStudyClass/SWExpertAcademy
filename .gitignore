@@ -35,8 +35,7 @@
 .DS_Store
 
 # sublime binary file
-*
-!*.cpp
+
 
 
 
