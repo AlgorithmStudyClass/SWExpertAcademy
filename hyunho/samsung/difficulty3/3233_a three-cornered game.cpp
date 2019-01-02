@@ -25,16 +25,17 @@ int main() {
         scanf("%d %d" , &A , &B ) ;
 
         int bottomCnt = A / B ;
-        long resultCnt = 0 ;
+        long long int resultCnt = 0 ;
 
         for( int i = 1 ; i < bottomCnt ; i++ )
             resultCnt += ( i * 2 ) ;
         resultCnt += bottomCnt ;
 
-        printf("#%d %ld\n" , T , resultCnt ) ;
+        printf("#%d %lld\n" , T , resultCnt ) ;
     }
     return 0 ;
 }
+
 
 
 
