@@ -15,20 +15,21 @@ using namespace std ;
 
 int result ;
 
-void func( string num ) {
+void func( int firstNum ) {
 
-    int length = num.length() ;
+    int length = (int)log10(firstNum) + 1 ;
     
     if( length == 1 )
-        result = atoi(num.c_str() ) ;
+        result = firstNum ;
     else {
 
-        string tmpNum ;
-        long long int tmp = 0 ;
-        for( int i = 0 ; i < length ; i++ )
-            tmp += num[i] - '0' ;
+        int tmpNum = 0 ;
+        for( int i = 0 , index = pow( 10 , length - 1 ) ; i < length ; i++ ) {
 
-        tmpNum = to_string(tmp) ;
+            tmpNum += firstNum / index ;
+            firstNum %= index ;
+            index /= 10 ;
+        }
         func( tmpNum ) ;
     }
 }
@@ -43,14 +44,20 @@ int main() {
 
         char str[20] ;
         scanf("%s" , str ) ;
-        string num = string( str ) ;
 
-        func( num ) ;
+        int firstNum = 0 , index = 0 ;
+
+        while( str[index] )
+            firstNum += str[index++] - '0' ;
+
+        func( firstNum ) ;
 
         printf("#%d %d\n" , T , result ) ;
     }
     return 0 ;
 }
+
+
 
 
 
