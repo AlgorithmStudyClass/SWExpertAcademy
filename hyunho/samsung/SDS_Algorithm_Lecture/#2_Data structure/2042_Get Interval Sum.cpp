@@ -1,6 +1,8 @@
 /*
 2042. 구간의 합 구하기
 https://www.acmicpc.net/problem/2042
+
+index tree
 */
 
 #include<iostream>
