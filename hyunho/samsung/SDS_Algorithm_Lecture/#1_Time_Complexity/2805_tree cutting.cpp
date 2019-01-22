@@ -3,41 +3,98 @@
 https://www.acmicpc.net/problem/2805
 */
 
-#include<stdio.h>
+// #include<stdio.h>
+// using namespace std ;
+
+// int data[1000001] ;
+// int N , M ;
+
+// int max( int a , int b ) {
+
+//     return ( a > b ) ? a : b ;
+// }
+
+// long long int calc( int height ) {
+
+//     long long int sum = 0 ;
+//     for( int i = 1 ; i <= N ; i++ ) {
+
+//         if( data[i] > height )
+//             sum += ( data[i] - height ) ;
+//     }
+
+//     return sum ;
+// }
+
+// int main() {
+
+//     scanf("%d %d" , &N , &M ) ;
+
+//     int mx = 0 ;
+//     for( int i = 1 ; i <= N ; i++ ) {
+//         scanf("%d" , &data[i] ) ;
+//         mx = max( data[i] , mx ) ;
+//     }
+
+//     int l = 0 , r = mx ;
+//     int mid , result = 0 ;
+//     long long int tmp ;
+
+//     while( l < r ) {
+
+//         mid = ( l + r ) / 2 ;
+//         tmp = calc( mid ) ;
+
+//         if( tmp < M )
+//             r = mid ;
+//         else {
+//             result = mid ;
+//             l = mid + 1 ;
+//         }
+//     }
+
+//     printf("%d\n" , result ) ;
+
+//     return 0 ;
+// }
+
+
+#include<iostream>
 using namespace std ;
 
-int data[1000001] ;
 int N , M ;
+int list[1000001] ;
+int ans ;
 
-int max( int a , int b ) {
-
-    return ( a > b ) ? a : b ;
+int max_func( int a , int b ) {
+    return ( a > b )? a : b ;
 }
 
-long long int calc( int height ) {
+long long int calc( int mid ) {
 
-    long long int sum = 0 ;
+    long long int ret = 0 ;
     for( int i = 1 ; i <= N ; i++ ) {
 
-        if( data[i] > height )
-            sum += ( data[i] - height ) ;
+        if( list[i] > mid )
+            ret += ( list[i] - mid ) ;
     }
 
-    return sum ;
+    return ret ;
 }
 
 int main() {
 
     scanf("%d %d" , &N , &M ) ;
 
-    int mx = 0 ;
+    int maxNum = -1 ;
     for( int i = 1 ; i <= N ; i++ ) {
-        scanf("%d" , &data[i] ) ;
-        mx = max( data[i] , mx ) ;
+        scanf("%d" , &list[i] ) ;
+        maxNum = max_func( maxNum , list[i] ) ;
     }
 
-    int l = 0 , r = mx ;
-    int mid , result = 0 ;
+    int l = 0 ;
+    int r = maxNum ;
+    int mid ;
     long long int tmp ;
 
     while( l < r ) {
@@ -48,15 +105,19 @@ int main() {
         if( tmp < M )
             r = mid ;
         else {
-            result = mid ;
+            ans = mid ;
             l = mid + 1 ;
         }
     }
 
-    printf("%d\n" , result ) ;
-
+    printf("%d\n" , ans ) ;
     return 0 ;
 }
+
+
+
+
+
 
 
 
