@@ -7,7 +7,7 @@ window 법
 */
 
 // #include<stdio.h>
-// using namespace std ;
+// using namespace stqd ;
 
 // int data[10001] ;
 // int N , M ;
