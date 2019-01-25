@@ -1,42 +1,14 @@
-﻿/*
-	11653 소인수분해
-	https://www.acmicpc.net/problem/11653
-*/
+﻿#include<stdio.h>
 
-#include <iostream>
+int main(void) {
+	FILE *fp;
+	char mne[10], op[10], data[10];
+	int n;
 
-using namespace std;
-
-#define MAX_N 10000001
-
-bool check[MAX_N];
-int prime[MAX_N];
-
-int main() {
-	int n, prime_cnt = 0;
-
-	scanf("%d", &n);
-
-	for (int i = 2; i <= n; i++) check[i] = true;
-	for (int i = 2; i <= n; i++)
+	fp = fopen("a.txt", "r");
+	while (!feof(fp))
 	{
-		if (check[i])
-		{
-			prime[prime_cnt++] = i; 
-			for (int j = 2; i*j <= n; j++)
-				check[i*j] = false;
-		}
+		fscanf(fp, "%s", op);
 	}
-
-	int index = 0;
-	while (n != 1 && index<prime_cnt) {
-		if (n%prime[index] == 0) {
-			n /= prime[index];
-			printf("%d\n", prime[index]);
-		}
-		else
-			index++;
-	}
-
 	return 0;
 }
