@@ -3,6 +3,7 @@
 https://www.acmicpc.net/problem/2042
 
 index tree
+( = segment tree )
 */
 
 #include<iostream>
