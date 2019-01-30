@@ -2,12 +2,12 @@
 1922. 네트워크 연결
 https://www.acmicpc.net/problem/1922
 
+Minimum Spanning Tree
 최소 신장 트리( MST ) - 크루스칼
 간선리스트로 표현
 */
 
 #include<iostream>
-#include<vector>
 #include<algorithm>
 using namespace std ;
 
@@ -17,58 +17,53 @@ struct Edge {
 } ;
 
 int N , M ;
-Edge E[100000] ;
-int unionArr[ 1001 ] ;
+Edge info[100001] ;
+int list[1001] ;
+int cnt ;
+int ans ;
 
-bool comp( const Edge &a , const Edge &b ) {
-    return a.cost < b.cost ;    //  cost로 오름차순 정렬
+bool comp( const Edge &ref1 , const Edge &ref2 ) {
+    return ref1.cost < ref2.cost ;
 }
 
-int findCaptain( int n1 ) {
+int func_find( int n1 ) {
 
-    if( unionArr[n1] == n1 ) return n1 ;
-    else return unionArr[n1] = findCaptain( unionArr[n1] ) ;
+    if( list[n1] == n1 ) return n1 ;
+    else return list[n1] = func_find( list[n1] ) ;
 }
 
-void join( int n1 , int n2 ) {
-    unionArr[ findCaptain(n2) ] = findCaptain( n1 ) ;
+void func_union( int n1 , int n2 ) {
+    list[ func_find(n2) ] = func_find( n1 ) ;
 }
 
 int main() {
 
     scanf("%d" , &N ) ;
+
+    for( int i = 1 ; i <= N ; i++ )
+        list[i] = i ;
+
     scanf("%d" , &M ) ;
-
-    for( int i = 0 ; i < N + 1 ; i++ )
-        unionArr[i] = i ;
-
     for( int i = 0 ; i < M ; i++ )
-        scanf("%d %d %d" , &E[i].from , &E[i].to , &E[i].cost ) ;
+        scanf("%d %d %d" , &info[i].from , &info[i].to , &info[i].cost ) ;
 
-    sort( E , E + M , comp ) ;  //  간선 cost 낮은것부터
+    sort( info , info + M , comp ) ;
 
-    int cnt = 0 ;
-    int ans = 0 ;
     for( int i = 0 ; i < M ; i++ ) {
 
-        if( findCaptain( unionArr[ E[i].from ]) != findCaptain( unionArr[ E[i].to ] ) ) {   //  cycle 확인( union find )
-            join( E[i].from , E[i].to ) ;
-            ans += E[i].cost ;
+        if( func_find( info[i].from ) != func_find( info[i].to ) ) {
+            func_union( info[i].from , info[i].to ) ;
+            ans += info[i].cost ;
             cnt++ ;
-
-            if( cnt == N - 1 )  //  다 연결하면 간선은 정점 - 1 개 이다
-                break ;
         }
+
+        if( cnt == N - 1 )
+            break ;
     }
 
     printf("%d\n" , ans ) ;
     return 0 ;
 }
-
-
-
-
-
 
 
 
