@@ -38,12 +38,11 @@ void func_union( int n1 , int n2 ) {
 
 int main() {
 
-    scanf("%d" , &N ) ;
+    scanf("%d %d" , &N , &M ) ;
 
     for( int i = 1 ; i <= N ; i++ )
         list[i] = i ;
 
-    scanf("%d" , &M ) ;
     for( int i = 0 ; i < M ; i++ )
         scanf("%d %d %d" , &info[i].from , &info[i].to , &info[i].cost ) ;
 
@@ -64,12 +63,3 @@ int main() {
     printf("%d\n" , ans ) ;
     return 0 ;
 }
-
-
-
-
-
-
-
-
-
