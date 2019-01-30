@@ -10,7 +10,7 @@ union find
 using namespace std ;
 
 int N , M ;
-int list[10000001] ;
+int list[1000001] ;
 
 int func_find( int n1 ) {
 
@@ -49,33 +49,6 @@ int main() {
     }
     return 0 ;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
