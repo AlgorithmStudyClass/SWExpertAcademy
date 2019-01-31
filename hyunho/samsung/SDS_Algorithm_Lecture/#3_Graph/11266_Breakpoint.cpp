@@ -46,8 +46,10 @@ int dfs( int num , int p ) {
             childCnt++ ;   //  자식 수 갱신
             int low = dfs( node , num ) ;  //  dfs 탐색
 
-            if( p != -1 && low >= vOrder[ num ] )
+            if( p != -1 && low >= vOrder[ num ] ) {
+                cout << "low : " << low << " , " << "num : " << num << " , " << "vOrder : " << vOrder[num] << endl ;
                 isCutVertex[ num ] = 1 ;
+            }
 
             minNum = min( minNum , low ) ;
         }
