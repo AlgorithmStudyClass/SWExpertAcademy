@@ -50,7 +50,7 @@ using namespace std ;
 
 int N ;
 int list[301] ;
-int D[3][301] ;
+int D[3][301] ;	//	i번 연속 발고 j 번 째에 도달했을 때 최대 값
 int ans ;
 
 int max_func( int a , int b ) {
