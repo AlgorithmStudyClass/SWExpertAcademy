@@ -3,6 +3,7 @@
 https://www.acmicpc.net/problem/1915
 
 dp
+D[i][j] : 1 , 1 에서 i , j 까지 정사각형 최대 크기
 */
 
 // #include<iostream>
