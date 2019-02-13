@@ -3,6 +3,7 @@
 https://www.acmicpc.net/problem/2579
 
 dp
+D[i][j] : i번 연속 발고 j 번 째에 도달했을 때 최대 값
 */
 
 // #include<iostream>
